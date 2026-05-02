@@ -1,0 +1,1377 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>tritega/Danijel — Forge Your Limits</title>
+<meta name="description" content="A members-only training club. Six disciplines. One philosophy: train for the life you actually want to live." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700&family=Geist:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<div class="stage" id="stage">
+
+  <!-- Gym background photo (Jeff Nippard Muscle Lab aesthetic) -->
+  <div class="stage-bg" aria-hidden="true">
+    <img
+      src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1920&q=80"
+      alt=""
+      onerror="this.parentElement.style.display='none'"
+    />
+  </div>
+
+  <div class="hero-fx" aria-hidden="true">
+    <div class="hero-fx__halo"></div>
+    <div class="hero-fx__rim"></div>
+    <div class="hero-fx__floor"></div>
+  </div>
+
+  <nav class="nav" aria-label="Primary">
+    <div class="nav__brand">
+      <div class="nav__mark">t</div>
+      <span>tritega<span style="opacity:.55;font-weight:400;">/Danijel</span></span>
+    </div>
+    <ul class="nav__links" role="tablist">
+      <li><button class="nav__link is-active" data-route="home" data-i18n="nav.home">Home</button></li>
+      <li><button class="nav__link" data-route="programs" data-i18n="nav.programs">Programs</button></li>
+      <li><button class="nav__link" data-route="gallery" data-i18n="nav.gallery">Gallery</button></li>
+      <li><button class="nav__link" data-route="about" data-i18n="nav.about">About Us</button></li>
+      <li><button class="nav__link" data-route="contact" data-i18n="nav.contact">Contact</button></li>
+    </ul>
+    <div style="display:flex;gap:10px;align-items:center;">
+      <button class="lang-toggle" id="lang-toggle" title="Switch language">
+        <span class="lang-toggle__flag" id="lang-flag">🇬🇧</span>
+        <span id="lang-label">EN</span>
+      </button>
+      <button class="nav__cta" data-route="contact" data-i18n="nav.cta">Start Trial →</button>
+    </div>
+  </nav>
+
+  <!-- HOME HERO -->
+  <section class="hero page is-active" id="page-home">
+    <div class="hero__copy">
+      <span class="eyebrow"><span class="dot"></span><span data-i18n="home.eyebrow">Now enrolling — Spring '26 cohort</span></span>
+      <h1 class="hero__title" data-i18n="home.title" data-i18n-html="1">Forge a body<br/>that <em>refuses</em><br/>to break.</h1>
+      <p class="hero__lede" data-i18n="home.lede">A members-only training club for the relentless. Six disciplines, one philosophy: train for the life you actually want to live.</p>
+      <div class="cta-row">
+        <button class="btn-primary" data-route="programs"><span data-i18n="home.cta1">Begin Your Trial</span> <span>→</span></button>
+      </div>
+      <div class="reviews">
+        <div class="avatars">
+          <div class="av-1"></div>
+          <div class="av-2"></div>
+          <div class="av-3"></div>
+          <div class="avatar--add">+</div>
+        </div>
+        <div class="reviews__meta">
+          <div class="reviews__stars">★★★★★ <span style="font-family:var(--ff-text);color:var(--bone-50);margin-left:4px;">4.9</span></div>
+          <span class="reviews__count" data-i18n="home.reviews">2,140 member reviews</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero__athlete" id="athlete" aria-hidden="true">
+      <img class="athlete-photo" src="assets/coach-dann.png" alt="Coach Dann" />
+    </div>
+
+    <div class="chips">
+      <button class="chip" data-i18n="chip.1">Personal Training</button>
+      <button class="chip" data-i18n="chip.2">Strength Lab</button>
+      <button class="chip" data-i18n="chip.3">Mobility</button>
+      <button class="chip" data-i18n="chip.4">Combat Sports</button>
+      <button class="chip" data-i18n="chip.5">Endurance</button>
+      <button class="chip" data-i18n="chip.6">Recovery</button>
+    </div>
+  </section>
+
+  <!-- PROGRAMS HERO -->
+  <section class="page" id="page-programs-hero">
+    <div class="about-hero">
+      <span class="label-mono" data-i18n="prog.eyebrow">— Six disciplines</span>
+      <h1 class="about-hero__title" data-i18n="prog.title" data-i18n-html="1">Train with<br/><em>intention.</em></h1>
+      <p class="about-hero__lede" data-i18n="prog.lede">Each program is a structured 12-week protocol — periodized, coach-led, measured. Pick one focus or stack two.</p>
+    </div>
+  </section>
+
+  <!-- GALLERY HERO -->
+  <section class="page" id="page-gallery-hero">
+    <div class="about-hero">
+      <span class="label-mono" data-i18n="gal.eyebrow">— Inside the club</span>
+      <h1 class="about-hero__title" data-i18n="gal.title" data-i18n-html="1">Where <em>iron</em><br/>meets intent.</h1>
+      <p class="about-hero__lede" data-i18n="gal.lede">A look around the floor. Equipment, members, coaches, sweat. No filters, no choreography.</p>
+    </div>
+  </section>
+
+  <!-- ABOUT HERO -->
+  <section class="page" id="page-about-hero">
+    <div class="about-hero">
+      <span class="label-mono" data-i18n="about.eyebrow">— Est. 2014 · Belgrade</span>
+      <h1 class="about-hero__title" data-i18n="about.title" data-i18n-html="1">We don't sell<br/>fitness. We <em>forge</em><br/>character.</h1>
+      <p class="about-hero__lede" data-i18n="about.lede">tritega began in a converted ironworks with three coaches, fourteen members, and a refusal to compromise. A decade later, the philosophy hasn't changed.</p>
+    </div>
+  </section>
+
+  <!-- CONTACT HERO -->
+  <section class="page" id="page-contact-hero">
+    <div class="about-hero">
+      <span class="label-mono" data-i18n="contact.eyebrow">— Get in touch</span>
+      <h1 class="about-hero__title" data-i18n="contact.title" data-i18n-html="1">Walk in. <em>Or</em><br/>write first.</h1>
+      <p class="about-hero__lede" data-i18n="contact.lede">Tour the club, meet a coach, lift something heavy. Drop us a line and we'll book a 90-minute trial — no pressure, no contract.</p>
+    </div>
+  </section>
+
+</div>
+
+<!-- TICKER -->
+<div class="ticker" aria-hidden="true">
+  <div class="ticker__track" id="ticker-track"></div>
+</div>
+
+<!-- PAGE BODIES -->
+<main class="page-wrap">
+
+  <!-- HOME -->
+  <div class="page is-active" id="body-home">
+
+    <section class="section" id="bmi-section">
+      <div class="bmi">
+        <div class="bmi__copy">
+          <span class="label-mono" data-i18n="bmi.eyebrow">— Tool 01 / BMI</span>
+          <h2 class="bmi__title" data-i18n="bmi.title" data-i18n-html="1">Where do you<br/><em>start</em>?</h2>
+          <p class="bmi__desc" data-i18n="bmi.desc">Body Mass Index is a starting line, not a verdict. Use it to anchor your baseline — then come find a coach who'll write the chapter that follows.</p>
+          <div style="margin-top:24px;font-family:var(--ff-mono);font-size:11px;letter-spacing:0.2em;color:var(--bone-300);text-transform:uppercase;">
+            <div style="margin-bottom:6px;" data-i18n="bmi.live">▼ Live calculation</div>
+            <div style="opacity:0.6;" data-i18n="bmi.priv">No data leaves your browser.</div>
+          </div>
+        </div>
+        <div class="bmi__panel">
+          <div class="bmi__tabs" role="tablist">
+            <button class="bmi__tab is-active" data-unit="metric" data-i18n="bmi.metric">Metric</button>
+            <button class="bmi__tab" data-unit="imperial" data-i18n="bmi.imperial">Imperial</button>
+          </div>
+          <div class="bmi__inputs">
+            <div class="bmi__field">
+              <label id="lbl-height" data-i18n="bmi.height">Height</label>
+              <div class="bmi__input">
+                <input type="number" id="bmi-height" value="178" min="50" max="260" step="1" />
+                <span id="unit-height">cm</span>
+              </div>
+            </div>
+            <div class="bmi__field">
+              <label id="lbl-weight" data-i18n="bmi.weight">Weight</label>
+              <div class="bmi__input">
+                <input type="number" id="bmi-weight" value="76" min="20" max="400" step="0.1" />
+                <span id="unit-weight">kg</span>
+              </div>
+            </div>
+          </div>
+          <div class="bmi__result">
+            <div class="bmi__result-row">
+              <div>
+                <div style="font-family:var(--ff-mono);font-size:10px;letter-spacing:0.2em;color:var(--bone-300);text-transform:uppercase;margin-bottom:8px;" data-i18n="bmi.your">Your BMI</div>
+                <div><span class="bmi__value" id="bmi-value">24.0</span><span class="bmi__value-suffix">kg/m²</span></div>
+              </div>
+              <span class="bmi__category" id="bmi-category" style="background:rgba(107,192,122,0.15);color:#6BC07A;border:1px solid rgba(107,192,122,0.3);">Normal</span>
+            </div>
+            <div class="bmi__scale"><div class="bmi__pointer" id="bmi-pointer" style="left:43%;"></div></div>
+            <div class="bmi__scale-labels">
+              <span data-i18n="bmi.under">Under · 18.5</span>
+              <span data-i18n="bmi.normal">Normal · 25</span>
+              <span data-i18n="bmi.over">Over · 30</span>
+              <span data-i18n="bmi.obese">Obese · 40+</span>
+            </div>
+            <p style="font-size:13px;color:var(--bone-300);line-height:1.55;margin:18px 0 0;" id="bmi-advice"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="stats">
+      <div class="stat"><div class="stat__num">12<em>yr</em></div><div class="stat__label" data-i18n="stat.1">Established 2014</div></div>
+      <div class="stat"><div class="stat__num">38<em>+</em></div><div class="stat__label" data-i18n="stat.2">Tenured Coaches</div></div>
+      <div class="stat"><div class="stat__num">2.1<em>k</em></div><div class="stat__label" data-i18n="stat.3">Active Members</div></div>
+      <div class="stat"><div class="stat__num">94<em>%</em></div><div class="stat__label" data-i18n="stat.4">Annual Retention</div></div>
+    </section>
+
+    <section class="section">
+      <div class="section__head">
+        <div>
+          <span class="label-mono" data-i18n="home.prog.eyebrow">— Programs</span>
+          <h2 class="section__title" data-i18n="home.prog.title" data-i18n-html="1">Six disciplines.<br/><em>One</em> obsession.</h2>
+        </div>
+        <p class="section__sub" data-i18n="home.prog.sub">Each program is periodized over 12 weeks with weekly check-ins, video review, and a coach who knows your name.</p>
+      </div>
+      <div class="programs-grid">
+        <article class="program-card program-card--feat" data-route="programs">
+          <div>
+            <div class="program-card__num" data-i18n="prog.1.num">PROGRAM / 01</div>
+            <h3 class="program-card__title" data-i18n="prog.1.title" data-i18n-html="1">Strength<br/>Lab</h3>
+            <p class="program-card__desc" data-i18n="prog.1.desc">Powerlifting + hypertrophy on a 4-day split. Bar-speed tracked, RPE-based, individually programmed.</p>
+          </div>
+          <div class="program-card__meta">
+            <span data-i18n="meta.12w">12 weeks</span><span data-i18n="meta.4w">4× / week</span><span data-i18n="meta.all">All levels</span>
+          </div>
+        </article>
+        <article class="program-card program-card--md" data-route="programs">
+          <div class="program-card__num" data-i18n="prog.2.num">PROGRAM / 02</div>
+          <h3 class="program-card__title" data-i18n="prog.2.title">Endurance</h3>
+          <p class="program-card__desc" data-i18n="prog.2.desc">Threshold + zone-2 running and rowing. HR-anchored.</p>
+          <div class="program-card__meta"><span data-i18n="meta.12w">12 weeks</span><span data-i18n="meta.5w">5×/wk</span></div>
+        </article>
+        <article class="program-card program-card--md" data-route="programs">
+          <div class="program-card__num" data-i18n="prog.3.num">PROGRAM / 03</div>
+          <h3 class="program-card__title" data-i18n="prog.3.title" data-i18n-html="1">Combat<br/>Sports</h3>
+          <p class="program-card__desc" data-i18n="prog.3.desc">Boxing, Muay Thai, BJJ rotations with sparring nights.</p>
+          <div class="program-card__meta"><span data-i18n="meta.open">Open</span><span data-i18n="meta.3w">3×/wk</span></div>
+        </article>
+        <article class="program-card program-card--md" data-route="programs">
+          <div class="program-card__num" data-i18n="prog.4.num">PROGRAM / 04</div>
+          <h3 class="program-card__title" data-i18n="prog.4.title">Mobility</h3>
+          <p class="program-card__desc" data-i18n="prog.4.desc">FRC + breathwork. Restore range you lost a decade ago.</p>
+          <div class="program-card__meta"><span data-i18n="meta.8w">8 weeks</span><span data-i18n="meta.2w">2×/wk</span></div>
+        </article>
+        <article class="program-card program-card--md" data-route="programs">
+          <div class="program-card__num" data-i18n="prog.5.num">PROGRAM / 05</div>
+          <h3 class="program-card__title" data-i18n="prog.5.title" data-i18n-html="1">Personal<br/>Training</h3>
+          <p class="program-card__desc" data-i18n="prog.5.desc">1-on-1 with Coach Dann or a tenured coach. Full programming, nutrition.</p>
+          <div class="program-card__meta"><span data-i18n="meta.roll">Rolling</span><span data-i18n="meta.req">By request</span></div>
+        </article>
+        <article class="program-card program-card--md" data-route="programs">
+          <div class="program-card__num" data-i18n="prog.6.num">PROGRAM / 06</div>
+          <h3 class="program-card__title" data-i18n="prog.6.title">Recovery</h3>
+          <p class="program-card__desc" data-i18n="prog.6.desc">Sauna, cold plunge, contrast therapy, sports massage.</p>
+          <div class="program-card__meta"><span data-i18n="meta.open">Open</span><span data-i18n="meta.drop">Drop-in</span></div>
+        </article>
+      </div>
+      <div style="text-align:center;margin-top:48px;">
+        <button class="btn-primary" data-route="programs"><span data-i18n="home.prog.more">See full program library</span> →</button>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section__head">
+        <div>
+          <span class="label-mono" data-i18n="test.eyebrow">— Members on the record</span>
+          <h2 class="section__title" data-i18n="test.title" data-i18n-html="1">What people<br/><em>actually</em> say.</h2>
+        </div>
+        <p class="section__sub" data-i18n="test.sub">2,140 members. 4.9 average over 12 months. Below: six unedited testimonials.</p>
+      </div>
+      <div class="testimonials" id="testimonials"></div>
+    </section>
+
+  </div>
+
+  <!-- PROGRAMS -->
+  <div class="page" id="body-programs">
+    <section class="section">
+      <div class="programs-grid">
+        <article class="program-card program-card--lg">
+          <div>
+            <div class="program-card__num">DISCIPLINE / 01</div>
+            <h3 class="program-card__title" data-i18n="prog.1.title" data-i18n-html="1">Strength Lab</h3>
+            <p class="program-card__desc" data-i18n="pp.1.desc">A 12-week periodized barbell program. Hypertrophy block → strength block → peak. Bar-speed tracked, RPE-coached, programmed by Coach Dann.</p>
+          </div>
+          <div class="program-card__meta"><span data-i18n="meta.12w">12 weeks</span><span data-i18n="meta.4w">4× per week</span><span data-i18n="pp.price.1">From €340/mo</span></div>
+        </article>
+        <article class="program-card program-card--lg">
+          <div>
+            <div class="program-card__num">DISCIPLINE / 02</div>
+            <h3 class="program-card__title" data-i18n="prog.2.title">Endurance</h3>
+            <p class="program-card__desc" data-i18n="pp.2.desc">Threshold-anchored running, rowing, and assault-bike work. We measure lactate, write zones, and hold you to them.</p>
+          </div>
+          <div class="program-card__meta"><span data-i18n="meta.12w">12 weeks</span><span data-i18n="meta.5w">5× per week</span><span data-i18n="pp.price.2">From €290/mo</span></div>
+        </article>
+        <article class="program-card program-card--feat">
+          <div>
+            <div class="program-card__num" data-i18n="pp.3.num">DISCIPLINE / 03 — FLAGSHIP</div>
+            <h3 class="program-card__title" data-i18n="prog.3.title" data-i18n-html="1">Combat Sports</h3>
+            <p class="program-card__desc" data-i18n="pp.3.desc">Boxing, Muay Thai, no-gi BJJ. Three open mats per week, sparring Tuesdays and Saturdays.</p>
+          </div>
+          <div class="program-card__meta"><span data-i18n="meta.year">Year-round</span><span data-i18n="meta.35w">3–5× per week</span><span data-i18n="pp.price.3">From €410/mo</span></div>
+        </article>
+        <article class="program-card program-card--md">
+          <div class="program-card__num">DISCIPLINE / 04</div>
+          <h3 class="program-card__title" data-i18n="prog.4.title">Mobility</h3>
+          <p class="program-card__desc" data-i18n="pp.4.desc">Functional Range Conditioning, breathwork, controlled articular rotations.</p>
+          <div class="program-card__meta"><span data-i18n="meta.8w">8 weeks</span><span data-i18n="meta.2w">2×/wk</span></div>
+        </article>
+        <article class="program-card program-card--md">
+          <div class="program-card__num">DISCIPLINE / 05</div>
+          <h3 class="program-card__title" data-i18n="pp.5.title">1-on-1 Coaching</h3>
+          <p class="program-card__desc" data-i18n="pp.5.desc">A tenured coach, your goals, full programming and nutrition planning.</p>
+          <div class="program-card__meta"><span data-i18n="meta.roll">Rolling</span><span data-i18n="meta.req">By request</span></div>
+        </article>
+        <article class="program-card program-card--md">
+          <div class="program-card__num">DISCIPLINE / 06</div>
+          <h3 class="program-card__title" data-i18n="prog.6.title">Recovery</h3>
+          <p class="program-card__desc" data-i18n="pp.6.desc">Sauna, ice plunge, contrast therapy, on-staff sports massage and PT.</p>
+          <div class="program-card__meta"><span data-i18n="meta.open">Open</span><span data-i18n="meta.drop">Drop-in</span></div>
+        </article>
+      </div>
+      <div style="text-align:center;margin-top:60px;">
+        <button class="btn-primary" data-route="contact"><span data-i18n="nav.cta">Start Trial →</span></button>
+      </div>
+    </section>
+  </div>
+
+  <!-- GALLERY -->
+  <div class="page" id="body-gallery">
+    <section class="section">
+      <div class="gallery" id="gallery"></div>
+    </section>
+  </div>
+
+  <!-- ABOUT -->
+  <div class="page" id="body-about">
+
+    <section class="section" style="padding-top:60px;">
+      <div class="coach-feature">
+        <div class="coach-feature__img">
+          <img src="assets/coach-dann.png" alt="Coach Dann — Head Coach and Founder" />
+          <div class="coach-feature__tag">
+            <span class="label-mono" style="color:var(--ember-400);margin-bottom:4px;">— Head Coach</span>
+            <div style="font-family:var(--ff-display);font-size:36px;letter-spacing:-0.02em;line-height:1;margin-top:6px;">Coach Dann</div>
+          </div>
+        </div>
+        <div>
+          <span class="label-mono" data-i18n="dann.eyebrow">— The man behind the method</span>
+          <h2 class="section__title" style="font-size:clamp(40px,5vw,56px);margin-top:12px;" data-i18n="dann.title" data-i18n-html="1">Built from<br/><em>nothing</em>.<br/>Refused to stop.</h2>
+          <p style="color:var(--bone-200);font-size:17px;line-height:1.65;margin-top:24px;" data-i18n="dann.p1"></p>
+          <p style="color:var(--bone-200);font-size:17px;line-height:1.65;margin-top:16px;" data-i18n="dann.p2" data-i18n-html="1"></p>
+          <p style="color:var(--bone-200);font-size:17px;line-height:1.65;margin-top:16px;" data-i18n="dann.p3"></p>
+          <div style="display:flex;gap:32px;margin-top:36px;flex-wrap:wrap;">
+            <div><div style="font-family:var(--ff-display);font-size:40px;font-weight:700;line-height:1;">12</div><div class="label-mono" style="margin-top:6px;" data-i18n="dann.s1">— Years coaching</div></div>
+            <div><div style="font-family:var(--ff-display);font-size:40px;font-weight:700;line-height:1;">340<span style="font-size:20px;">kg</span></div><div class="label-mono" style="margin-top:6px;" data-i18n="dann.s2">— Career deadlift PR</div></div>
+            <div><div style="font-family:var(--ff-display);font-size:40px;font-weight:700;line-height:1;">5:30</div><div class="label-mono" style="margin-top:6px;" data-i18n="dann.s3">— AM, every weekday</div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:60px;">
+      <div class="programs-grid">
+        <div style="grid-column:span 5;">
+          <span class="label-mono" data-i18n="phil.eyebrow">— Our philosophy</span>
+          <h2 class="section__title" style="font-size:clamp(32px,4vw,48px);margin-top:12px;" data-i18n="phil.title" data-i18n-html="1">Hard work,<br/><em>made</em> beautiful.</h2>
+        </div>
+        <p style="grid-column:span 7;color:var(--bone-200);font-size:18px;line-height:1.6;" data-i18n="phil.body" data-i18n-html="1"></p>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:0;">
+      <div class="section__head">
+        <div>
+          <span class="label-mono" data-i18n="story.eyebrow">— Our story</span>
+          <h2 class="section__title" data-i18n="story.title" data-i18n-html="1">A decade<br/><em>at the iron.</em></h2>
+        </div>
+      </div>
+      <div class="timeline" id="timeline"></div>
+    </section>
+
+    <section class="section" style="padding-top:0;">
+      <div class="section__head">
+        <div>
+          <span class="label-mono" data-i18n="loc.eyebrow">— Where to find us</span>
+          <h2 class="section__title" data-i18n="loc.title" data-i18n-html="1">Belgrade.<br/><em>Old town.</em></h2>
+        </div>
+        <p class="section__sub" data-i18n="loc.sub">Five minutes from Knez Mihailova. Bring water and an open mind.</p>
+      </div>
+      <div class="map-wrap">
+        <iframe
+          src="https://www.openstreetmap.org/export/embed.html?bbox=20.4500%2C44.8140%2C20.4640%2C44.8220&layer=mapnik&marker=44.8180%2C20.4570"
+          style="border:0;width:100%;height:100%;filter:invert(0.92) hue-rotate(180deg) saturate(0.6) brightness(0.85);"
+          loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="tritega/Danijel location">
+        </iframe>
+        <div class="map-pin">
+          <div class="map-pin__dot"></div>
+          <div class="map-pin__label">tritega/Danijel</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section__head">
+        <div>
+          <span class="label-mono" data-i18n="team.eyebrow">— The coaches</span>
+          <h2 class="section__title" data-i18n="team.title" data-i18n-html="1">People who'll<br/><em>know</em> your name.</h2>
+        </div>
+        <p class="section__sub" data-i18n="team.sub">Average tenure on our coaching staff is 5.4 years. We hire deliberately and we don't churn.</p>
+      </div>
+      <div class="team-grid" id="team-grid"></div>
+    </section>
+
+  </div>
+
+  <!-- CONTACT -->
+  <div class="page" id="body-contact">
+    <section class="section">
+      <div class="contact-grid">
+        <div>
+          <span class="label-mono" data-i18n="cf.eyebrow">— Book a trial</span>
+          <h2 class="section__title" style="font-size:clamp(36px,4vw,48px);margin-bottom:32px;margin-top:12px;" data-i18n="cf.title" data-i18n-html="1">90 minutes.<br/>Zero <em>pressure.</em></h2>
+          <form class="contact-form" id="contact-form" novalidate>
+            <div class="form-row">
+              <div class="form-field">
+                <label for="cf-first" data-i18n="cf.first">First Name</label>
+                <input id="cf-first" type="text" autocomplete="given-name" required />
+              </div>
+              <div class="form-field">
+                <label for="cf-last" data-i18n="cf.last">Last Name</label>
+                <input id="cf-last" type="text" autocomplete="family-name" required />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-field">
+                <label for="cf-email" data-i18n="cf.email">Email</label>
+                <input id="cf-email" type="email" autocomplete="email" required />
+              </div>
+              <div class="form-field">
+                <label for="cf-phone" data-i18n="cf.phone">Phone</label>
+                <input id="cf-phone" type="tel" autocomplete="tel" />
+              </div>
+            </div>
+            <div class="form-field">
+              <label for="cf-program" data-i18n="cf.interest">Interested in</label>
+              <select id="cf-program">
+                <option data-i18n="prog.1.title">Strength Lab</option>
+                <option data-i18n="prog.2.title">Endurance</option>
+                <option data-i18n="prog.3.title-flat">Combat Sports</option>
+                <option data-i18n="prog.4.title">Mobility</option>
+                <option data-i18n="pp.5.title">1-on-1 Coaching</option>
+                <option data-i18n="prog.6.title">Recovery</option>
+                <option data-i18n="cf.unsure">Not sure yet — recommend something</option>
+              </select>
+            </div>
+            <div class="form-field">
+              <label for="cf-msg" data-i18n="cf.about">Tell us about you</label>
+              <textarea id="cf-msg"></textarea>
+            </div>
+            <div>
+              <button class="btn-primary" type="submit"><span data-i18n="cf.submit">Submit request</span> →</button>
+            </div>
+            <p id="cf-status" style="font-family:var(--ff-mono);font-size:11px;letter-spacing:0.18em;color:var(--ember-400);text-transform:uppercase;margin:0;min-height:14px;" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+        <aside class="contact-side">
+          <span class="label-mono" data-i18n="cf.visit">— Visit the club</span>
+          <div class="contact-info-row">
+            <div class="lbl" data-i18n="cf.addr">Address</div>
+            <div class="val">Knez Mihailova 21<br/>11000 Beograd</div>
+          </div>
+          <div class="contact-info-row">
+            <div class="lbl" data-i18n="cf.phone2">Phone</div>
+            <div class="val"><a href="viber://chat?number=%2B381644185494">+381 64 418 5494</a></div>
+            <a href="viber://chat?number=%2B381644185494" class="contact-action">
+              <span class="contact-action__icon" style="background:#7360f2;">V</span>
+              <span data-i18n="cf.viber">Open in Viber</span>
+            </a>
+          </div>
+          <div class="contact-info-row">
+            <div class="lbl" data-i18n="cf.email2">Email</div>
+            <div class="val"><a href="mailto:iambrutalrealist@gmail.com">iambrutalrealist@gmail.com</a></div>
+            <a href="mailto:iambrutalrealist@gmail.com?subject=Trial%20Request%20—%20tritega%2FDanijel" class="contact-action">
+              <span class="contact-action__icon" style="background:var(--ember-500);">@</span>
+              <span data-i18n="cf.sendmail">Send an email</span>
+            </a>
+          </div>
+          <div style="margin-top:28px;">
+            <span class="label-mono" data-i18n="cf.hours">— Hours</span>
+            <div class="hours-grid">
+              <div class="day" data-i18n="cf.mf">Monday — Friday</div><div class="time">05:30 — 22:30</div>
+              <div class="day" data-i18n="cf.sat">Saturday</div><div class="time">06:30 — 20:00</div>
+              <div class="day" data-i18n="cf.sun">Sunday</div><div class="time">07:00 — 18:00</div>
+              <div class="day" data-i18n="cf.hol">Holidays</div><div class="time" data-i18n="cf.holval">Reduced — see app</div>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </div>
+
+</main>
+
+<footer class="footer">
+  <div class="page-wrap">
+    <div class="footer__top">
+      <div>
+        <div class="footer__brand">tritega/<em>Danijel</em></div>
+        <p style="color:var(--bone-300);max-width:380px;margin-top:20px;line-height:1.6;" data-i18n="ftr.tag"></p>
+      </div>
+      <div class="footer__col">
+        <h4 data-i18n="ftr.club">Club</h4>
+        <ul>
+          <li><a data-route="programs" data-i18n="nav.programs">Programs</a></li>
+          <li><a data-route="gallery" data-i18n="nav.gallery">Gallery</a></li>
+          <li><a data-route="about" data-i18n="nav.about">About</a></li>
+          <li><a data-route="contact" data-i18n="nav.contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4 data-i18n="ftr.visit">Visit</h4>
+        <ul>
+          <li><a>Knez Mihailova 21</a></li>
+          <li><a>11000 Beograd</a></li>
+          <li><a href="viber://chat?number=%2B381644185494">+381 64 418 5494</a></li>
+          <li><a href="mailto:iambrutalrealist@gmail.com">iambrutalrealist@gmail.com</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4 data-i18n="ftr.follow">Follow</h4>
+        <ul>
+          <li><a>Instagram</a></li>
+          <li><a>YouTube</a></li>
+          <li><a data-i18n="ftr.journal">The Journal</a></li>
+          <li><a data-i18n="ftr.news">Newsletter</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span data-i18n="ftr.copy">© 2026 tritega / Danijel</span>
+      <span data-i18n="ftr.est">Forged in Belgrade · Est. 2014</span>
+    </div>
+  </div>
+</footer>
+
+<script src="i18n.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
+:root {
+  --ink-950: #0E0A07;
+  --ink-900: #15100B;
+  --ink-800: #1E1812;
+  --ink-700: #2A2218;
+  --ink-600: #3A2E20;
+  --ink-500: #5A4530;
+  --ink-400: #8A6E50;
+  --bone-50:  #F8F3EB;
+  --bone-100: #F1EADC;
+  --bone-200: #E5D9C2;
+  --bone-300: #C9B898;
+  --ember-500: #E8501C;
+  --ember-400: #FF6A2A;
+  --ember-600: #C13A0E;
+  --ember-glow: rgba(255, 106, 42, 0.35);
+  --gold-400: #E8A647;
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-pill: 999px;
+  --shadow-soft: 0 1px 0 rgba(255,255,255,0.04) inset, 0 20px 40px -20px rgba(0,0,0,.6);
+  --shadow-ember: 0 12px 40px -10px var(--ember-glow);
+  --ff-display: "Bricolage Grotesque", ui-sans-serif, system-ui, sans-serif;
+  --ff-text:    "Geist", ui-sans-serif, system-ui, sans-serif;
+  --ff-mono:    "JetBrains Mono", ui-monospace, monospace;
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  font-family: var(--ff-text);
+  background: var(--ink-950);
+  color: var(--bone-50);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+img { max-width: 100%; display: block; }
+button { font-family: inherit; cursor: pointer; border: none; background: none; color: inherit; }
+a { color: inherit; text-decoration: none; }
+
+.page-wrap { max-width: 1320px; margin: 0 auto; padding: 0 32px; }
+
+/* Stage */
+.stage {
+  position: relative;
+  margin: 18px auto 0;
+  max-width: 1380px;
+  border-radius: 28px;
+  overflow: hidden;
+  background:
+    radial-gradient(120% 80% at 80% 0%, rgba(232,80,28,0.55), transparent 55%),
+    radial-gradient(80% 60% at 20% 100%, rgba(193,58,14,0.35), transparent 60%),
+    linear-gradient(180deg, #2A1A0E 0%, #150B06 100%);
+  min-height: 760px;
+  isolation: isolate;
+}
+.stage::before {
+  content: "";
+  position: absolute; inset: 0;
+  background: repeating-linear-gradient(0deg, rgba(255,255,255,0.012) 0 1px, transparent 1px 4px);
+  pointer-events: none;
+  mix-blend-mode: screen;
+  z-index: 2;
+}
+
+/* Background gym photo */
+.stage-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+.stage-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 40%;
+  opacity: 0.22;
+  filter: grayscale(0.4) contrast(1.15) brightness(0.7);
+}
+
+/* Nav */
+.nav {
+  position: relative;
+  z-index: 30;
+  margin: 22px 28px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 14px 10px 22px;
+  background: rgba(20,12,7,0.6);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: var(--radius-pill);
+}
+.nav__brand { display: flex; align-items: center; gap: 10px; font-family: var(--ff-display); font-weight: 700; font-size: 18px; letter-spacing: -0.01em; }
+.nav__mark {
+  width: 28px; height: 28px;
+  border-radius: 8px;
+  background: linear-gradient(135deg, var(--ember-400), var(--ember-600));
+  display: grid; place-items: center;
+  color: var(--ink-950);
+  font-family: var(--ff-display); font-weight: 800; font-size: 16px;
+  box-shadow: 0 6px 18px -6px var(--ember-glow);
+}
+.nav__links { display: flex; gap: 6px; list-style: none; padding: 0; margin: 0; }
+.nav__link { padding: 8px 14px; border-radius: var(--radius-pill); font-size: 14px; color: var(--bone-100); opacity: 0.85; transition: all .2s ease; cursor: pointer; }
+.nav__link:hover { opacity: 1; background: rgba(255,255,255,0.04); }
+.nav__link.is-active { opacity: 1; color: var(--bone-50); background: rgba(255,255,255,0.06); }
+.nav__cta { background: var(--ember-500); color: var(--bone-50); padding: 10px 20px; border-radius: var(--radius-pill); font-size: 14px; font-weight: 500; letter-spacing: 0.01em; transition: all .2s ease; }
+.nav__cta:hover { background: var(--ember-400); transform: translateY(-1px); }
+
+/* Hero */
+.hero {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1.05fr 1fr;
+  gap: 24px;
+  padding: 60px 60px 80px;
+  min-height: 640px;
+  z-index: 2;
+}
+.hero__copy { position: relative; z-index: 5; padding-top: 30px; }
+
+.eyebrow {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-family: var(--ff-mono); font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--ember-400);
+  padding: 6px 12px;
+  border: 1px solid rgba(232,80,28,0.35);
+  border-radius: var(--radius-pill);
+  background: rgba(232,80,28,0.08);
+  margin-bottom: 24px;
+}
+.eyebrow .dot {
+  width: 6px; height: 6px; border-radius: 50%;
+  background: var(--ember-400);
+  box-shadow: 0 0 10px var(--ember-400);
+  animation: pulse 1.6s infinite;
+}
+@keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.4; } }
+
+.hero__title {
+  font-family: var(--ff-display); font-weight: 700;
+  font-size: clamp(48px, 6vw, 84px);
+  line-height: 0.95; letter-spacing: -0.025em;
+  margin: 0 0 22px; color: var(--bone-50); text-wrap: balance;
+}
+.hero__title em { font-style: italic; font-weight: 500; color: var(--ember-400); }
+.hero__lede { font-size: 17px; line-height: 1.55; color: var(--bone-200); max-width: 460px; margin: 0 0 36px; text-wrap: pretty; }
+
+.cta-row { display: flex; gap: 14px; align-items: center; flex-wrap: wrap; margin-bottom: 56px; }
+.btn-primary {
+  background: var(--ember-500); color: var(--bone-50);
+  padding: 16px 28px; border-radius: var(--radius-pill);
+  font-size: 15px; font-weight: 500;
+  display: inline-flex; align-items: center; gap: 12px;
+  box-shadow: var(--shadow-ember); transition: all .25s ease;
+}
+.btn-primary:hover { background: var(--ember-400); transform: translateY(-2px); }
+
+.reviews { display: flex; align-items: center; gap: 16px; }
+.avatars { display: flex; }
+.avatars > * { width: 38px; height: 38px; border-radius: 50%; border: 2px solid var(--ink-800); margin-left: -10px; }
+.avatars > *:first-child { margin-left: 0; }
+.avatar--add { background: rgba(255,255,255,0.04); border: 1px dashed rgba(255,255,255,0.25) !important; display: grid; place-items: center; color: var(--ember-400); }
+.av-1 { background: linear-gradient(135deg, #C9762B, #6B3A18); }
+.av-2 { background: linear-gradient(135deg, #4A3326, #1A100A); }
+.av-3 { background: linear-gradient(135deg, #E8A647, #8A5022); }
+.reviews__meta { font-size: 12px; color: var(--bone-200); }
+.reviews__stars { color: var(--ember-400); letter-spacing: 2px; font-size: 13px; }
+.reviews__count { font-family: var(--ff-mono); display: block; margin-top: 2px; opacity: 0.7; }
+
+/* Athlete */
+.hero__athlete {
+  position: absolute; right: -60px; bottom: -20px;
+  width: 60%; max-width: 720px; height: 105%;
+  z-index: 4; pointer-events: none; will-change: transform;
+  display: flex; align-items: flex-end; justify-content: center;
+}
+.athlete-photo {
+  width: 100%; height: 100%;
+  object-fit: contain; object-position: bottom center;
+  filter:
+    drop-shadow(-40px 60px 80px rgba(0,0,0,0.85))
+    drop-shadow(-10px 0 40px rgba(232,80,28,0.35))
+    contrast(1.08) saturate(1.05);
+}
+
+/* Dramatic hero FX */
+.hero-fx { position: absolute; inset: 0; z-index: 1; pointer-events: none; overflow: hidden; }
+.hero-fx__halo {
+  position: absolute; right: -10%; top: -20%; width: 70%; height: 110%;
+  background: radial-gradient(closest-side, rgba(255,106,42,0.55) 0%, rgba(193,58,14,0.3) 35%, transparent 65%);
+  filter: blur(20px);
+  animation: haloPulse 6s ease-in-out infinite;
+}
+.hero-fx__rim {
+  position: absolute; right: 0; top: 0; bottom: 0; width: 50%;
+  background: linear-gradient(270deg, rgba(255,180,80,0.18) 0%, transparent 70%);
+  mix-blend-mode: screen;
+}
+.hero-fx__floor {
+  position: absolute; left: 0; right: 0; bottom: 0; height: 30%;
+  background: linear-gradient(180deg, transparent 0%, rgba(0,0,0,0.6) 80%, rgba(0,0,0,0.85) 100%);
+}
+@keyframes haloPulse { 0%,100% { opacity: 1; transform: scale(1); } 50% { opacity: 0.85; transform: scale(1.04); } }
+
+/* Lang toggle */
+.lang-toggle {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 8px 14px; border-radius: var(--radius-pill);
+  background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08);
+  font-family: var(--ff-mono); font-size: 11px; letter-spacing: 0.15em;
+  color: var(--bone-100); transition: all .2s ease;
+}
+.lang-toggle:hover { background: rgba(255,255,255,0.08); border-color: var(--ember-400); }
+.lang-toggle__flag { font-size: 14px; }
+
+/* Chips */
+.chips {
+  position: absolute; left: 60px; bottom: 50px;
+  display: flex; flex-wrap: wrap; gap: 10px; max-width: 460px; z-index: 5;
+}
+.chip {
+  padding: 8px 16px; border-radius: var(--radius-pill);
+  border: 1px solid rgba(255,255,255,0.12);
+  background: rgba(20,12,7,0.6); backdrop-filter: blur(10px);
+  font-size: 13px; color: var(--bone-100); transition: all .2s ease; cursor: pointer;
+}
+.chip:hover { border-color: var(--ember-400); color: var(--ember-400); }
+
+/* Ticker */
+.ticker {
+  background: var(--ink-950);
+  border-top: 1px solid rgba(255,255,255,0.05);
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+  overflow: hidden; padding: 22px 0; margin-top: 60px;
+  font-family: var(--ff-display); font-size: 28px; letter-spacing: -0.01em;
+}
+.ticker__track { display: flex; gap: 48px; white-space: nowrap; animation: marquee 40s linear infinite; width: max-content; }
+.ticker__item { display: inline-flex; align-items: center; gap: 48px; color: var(--bone-300); }
+.ticker__item .dot { width: 10px; height: 10px; background: var(--ember-500); border-radius: 50%; }
+@keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+/* Sections */
+.section { padding: 100px 0; }
+.section__head { display: flex; align-items: end; justify-content: space-between; margin-bottom: 48px; gap: 32px; flex-wrap: wrap; }
+.section__title { font-family: var(--ff-display); font-weight: 700; font-size: clamp(36px, 4.5vw, 64px); line-height: 1; letter-spacing: -0.025em; margin: 0; text-wrap: balance; }
+.section__title em { font-style: italic; font-weight: 500; color: var(--ember-400); }
+.section__sub { max-width: 460px; color: var(--bone-300); font-size: 16px; line-height: 1.55; }
+.label-mono { font-family: var(--ff-mono); font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--ember-400); margin-bottom: 16px; display: block; }
+
+/* Testimonials */
+.testimonials { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.testimonial {
+  background: linear-gradient(180deg, #1A120C 0%, #0E0905 100%);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 18px; padding: 28px;
+  display: flex; flex-direction: column; gap: 18px; transition: border-color .2s;
+}
+.testimonial:hover { border-color: rgba(232,80,28,0.4); }
+.testimonial__stars { color: var(--ember-400); letter-spacing: 3px; font-size: 14px; }
+.testimonial__body { font-size: 15px; line-height: 1.6; color: var(--bone-100); margin: 0; flex: 1; text-wrap: pretty; }
+.testimonial__person { display: flex; align-items: center; gap: 12px; }
+.testimonial__avatar {
+  width: 46px; height: 46px; border-radius: 50%;
+  overflow: hidden; flex-shrink: 0;
+  border: 2px solid rgba(232,80,28,0.4);
+  background: var(--ink-700);
+}
+.testimonial__avatar img { width: 100%; height: 100%; object-fit: cover; }
+.testimonial__name { font-family: var(--ff-display); font-size: 16px; letter-spacing: -0.01em; }
+.testimonial__role { font-family: var(--ff-mono); font-size: 10px; letter-spacing: 0.15em; color: var(--ember-400); text-transform: uppercase; margin-top: 2px; }
+
+/* Gallery */
+.gallery { display: grid; grid-template-columns: repeat(4, 1fr); grid-auto-rows: 220px; gap: 14px; }
+.g-card {
+  position: relative; margin: 0;
+  border-radius: 16px; overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.06);
+  cursor: pointer;
+  transition: transform .4s cubic-bezier(.2,0,.2,1);
+  background: var(--ink-800);
+}
+.g-card:hover { transform: translateY(-4px); }
+.g-card.g-tall { grid-row: span 2; }
+.g-card.g-wide { grid-column: span 2; }
+.g-card__bg { position: absolute; inset: 0; }
+.g-card__photo {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  opacity: 0.75;
+  filter: contrast(1.1) saturate(0.8) brightness(0.85);
+  transition: transform .5s cubic-bezier(.2,0,.2,1), opacity .3s ease;
+}
+.g-card:hover .g-card__photo { transform: scale(1.04); opacity: 0.9; }
+.g-card__tint {
+  position: absolute; inset: 0;
+  background: linear-gradient(180deg, transparent 30%, rgba(0,0,0,0.85) 100%),
+              linear-gradient(90deg, transparent 60%, rgba(0,0,0,0.4) 100%);
+  z-index: 1;
+}
+.g-card__noise {
+  position: absolute; inset: 0; z-index: 2;
+  background: repeating-linear-gradient(45deg, rgba(255,255,255,0.015) 0 1px, transparent 1px 7px);
+}
+.g-card__cap { position: absolute; left: 20px; right: 20px; bottom: 18px; z-index: 3; }
+.g-card__num { font-family: var(--ff-mono); font-size: 10px; letter-spacing: 0.2em; color: var(--ember-400); margin-bottom: 6px; }
+.g-card__title {
+  font-family: var(--ff-display); font-weight: 700;
+  font-size: 22px; line-height: 1.05; letter-spacing: -0.02em;
+  color: var(--bone-50); text-shadow: 0 4px 20px rgba(0,0,0,0.8);
+}
+.g-card.g-wide .g-card__title, .g-card.g-tall .g-card__title { font-size: 28px; }
+.g-card__desc {
+  font-size: 12px; color: rgba(255,255,255,0.65); margin-top: 5px;
+  font-family: var(--ff-mono); letter-spacing: 0.05em;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.9);
+}
+
+/* Coach feature */
+.coach-feature { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 56px; align-items: center; }
+.coach-feature__img {
+  position: relative; border-radius: 24px;
+  background: radial-gradient(80% 80% at 30% 20%, rgba(232,80,28,0.4), transparent 60%), linear-gradient(180deg, #1A120C 0%, #0A0604 100%);
+  border: 1px solid rgba(255,255,255,0.06);
+  aspect-ratio: 4/5; overflow: hidden;
+  display: flex; align-items: flex-end; justify-content: center;
+}
+.coach-feature__img img { width: 100%; height: 100%; object-fit: cover; object-position: center top; filter: contrast(1.08) saturate(1.05); }
+.coach-feature__tag {
+  position: absolute; left: 24px; bottom: 24px;
+  background: rgba(14,9,5,0.75); backdrop-filter: blur(10px);
+  padding: 14px 18px; border-radius: 14px; border: 1px solid rgba(255,255,255,0.08);
+}
+
+/* BMI */
+.bmi {
+  position: relative; margin: 0 auto; max-width: 1180px;
+  padding: 56px; border-radius: 24px;
+  background: linear-gradient(180deg, #1A120C 0%, #0E0905 100%);
+  border: 1px solid rgba(255,255,255,0.06);
+  display: grid; grid-template-columns: 1fr 1.1fr; gap: 56px;
+  align-items: center; overflow: hidden;
+}
+.bmi::before {
+  content: ""; position: absolute; inset: 0;
+  background: radial-gradient(60% 70% at 90% 100%, rgba(232,80,28,0.18), transparent 60%);
+  pointer-events: none;
+}
+.bmi__copy { position: relative; }
+.bmi__title { font-family: var(--ff-display); font-weight: 700; font-size: 48px; line-height: 1; letter-spacing: -0.025em; margin: 0 0 16px; }
+.bmi__title em { font-style: italic; font-weight: 500; color: var(--ember-400); }
+.bmi__desc { color: var(--bone-300); font-size: 15px; line-height: 1.6; max-width: 420px; }
+.bmi__panel { position: relative; }
+.bmi__tabs { display: flex; gap: 4px; padding: 4px; background: rgba(0,0,0,0.4); border-radius: var(--radius-pill); margin-bottom: 24px; width: fit-content; }
+.bmi__tab { padding: 8px 18px; border-radius: var(--radius-pill); font-size: 13px; color: var(--bone-300); transition: all .2s ease; }
+.bmi__tab.is-active { background: var(--ember-500); color: var(--bone-50); }
+.bmi__inputs { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-bottom: 24px; }
+.bmi__field { display: flex; flex-direction: column; gap: 8px; }
+.bmi__field label { font-family: var(--ff-mono); font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--bone-300); }
+.bmi__input { position: relative; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 14px 16px; display: flex; align-items: baseline; gap: 8px; transition: border-color .2s; }
+.bmi__input:focus-within { border-color: var(--ember-400); }
+.bmi__input input { flex: 1; background: none; border: none; outline: none; color: var(--bone-50); font-family: var(--ff-display); font-size: 28px; font-weight: 500; width: 100%; -moz-appearance: textfield; }
+.bmi__input input::-webkit-outer-spin-button, .bmi__input input::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
+.bmi__input span { font-family: var(--ff-mono); font-size: 12px; color: var(--bone-300); }
+.bmi__result { background: rgba(0,0,0,0.35); border: 1px solid rgba(255,255,255,0.06); border-radius: 16px; padding: 24px; }
+.bmi__result-row { display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 16px; }
+.bmi__value { font-family: var(--ff-display); font-size: 56px; font-weight: 700; line-height: 1; letter-spacing: -0.02em; color: var(--bone-50); }
+.bmi__value-suffix { font-family: var(--ff-mono); font-size: 12px; color: var(--bone-300); margin-left: 8px; }
+.bmi__category { font-family: var(--ff-mono); font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; padding: 6px 12px; border-radius: var(--radius-pill); }
+.bmi__scale { position: relative; height: 8px; border-radius: 4px; background: linear-gradient(90deg, #4A90E2 0%, #4A90E2 18.5%, #6BC07A 18.5%, #6BC07A 31.25%, #E8A647 31.25%, #E8A647 43.75%, #E8501C 43.75%, #E8501C 100%); margin-top: 12px; margin-bottom: 8px; }
+.bmi__pointer { position: absolute; top: -4px; width: 4px; height: 16px; background: var(--bone-50); border-radius: 2px; transform: translateX(-50%); transition: left .4s cubic-bezier(.5,0,.2,1); box-shadow: 0 0 0 3px rgba(0,0,0,0.4); }
+.bmi__scale-labels { display: flex; justify-content: space-between; font-family: var(--ff-mono); font-size: 10px; color: var(--bone-300); margin-top: 6px; }
+
+/* Programs */
+.programs-grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 18px; }
+.program-card {
+  background: linear-gradient(180deg, #1C140E 0%, #110C08 100%);
+  border: 1px solid rgba(255,255,255,0.06); border-radius: 20px; padding: 32px;
+  position: relative; overflow: hidden; transition: all .3s ease; cursor: pointer;
+  min-height: 280px; display: flex; flex-direction: column; justify-content: space-between;
+}
+.program-card:hover { border-color: var(--ember-500); transform: translateY(-4px); }
+.program-card--lg { grid-column: span 6; min-height: 360px; }
+.program-card--md { grid-column: span 4; }
+.program-card--feat { grid-column: span 8; background: linear-gradient(135deg, var(--ember-600) 0%, var(--ember-500) 50%, #8B2A0A 100%); border-color: transparent; min-height: 360px; }
+.program-card--feat .program-card__num { color: rgba(255,255,255,0.4); }
+.program-card--feat .program-card__desc { color: rgba(255,255,255,0.85); }
+.program-card__num { font-family: var(--ff-mono); font-size: 11px; letter-spacing: 0.2em; color: var(--ember-400); }
+.program-card__title { font-family: var(--ff-display); font-weight: 700; font-size: 32px; line-height: 1; letter-spacing: -0.02em; margin: 16px 0 12px; color: var(--bone-50); }
+.program-card--lg .program-card__title, .program-card--feat .program-card__title { font-size: 44px; }
+.program-card__desc { font-size: 14px; color: var(--bone-300); line-height: 1.55; max-width: 380px; }
+.program-card__meta { display: flex; gap: 14px; margin-top: 24px; font-family: var(--ff-mono); font-size: 11px; color: var(--bone-300); letter-spacing: 0.1em; text-transform: uppercase; }
+.program-card__meta span::before { content: "—  "; opacity: 0.5; }
+
+/* Stats */
+.stats { display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid rgba(255,255,255,0.06); border-bottom: 1px solid rgba(255,255,255,0.06); }
+.stat { padding: 40px 24px; border-right: 1px solid rgba(255,255,255,0.06); }
+.stat:last-child { border-right: none; }
+.stat__num { font-family: var(--ff-display); font-weight: 700; font-size: 64px; line-height: 1; letter-spacing: -0.025em; }
+.stat__num em { font-style: italic; font-weight: 500; color: var(--ember-400); font-size: 32px; vertical-align: super; }
+.stat__label { font-family: var(--ff-mono); font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--bone-300); margin-top: 12px; }
+
+/* About */
+.about-hero { padding: 100px 60px 40px; }
+.about-hero__title { font-family: var(--ff-display); font-weight: 700; font-size: clamp(56px, 8vw, 120px); line-height: 0.9; letter-spacing: -0.03em; margin: 0; }
+.about-hero__title em { font-style: italic; font-weight: 500; color: var(--ember-400); }
+.about-hero__lede { max-width: 640px; font-size: 20px; line-height: 1.5; color: var(--bone-200); margin-top: 32px; }
+
+/* Timeline */
+.timeline { display: flex; flex-direction: column; }
+.tl-row { display: grid; grid-template-columns: 140px 1fr 1.2fr; gap: 32px; padding: 40px 0; border-top: 1px solid rgba(255,255,255,0.06); align-items: start; }
+.tl-row:last-child { border-bottom: 1px solid rgba(255,255,255,0.06); }
+.tl-year { font-family: var(--ff-mono); font-size: 13px; letter-spacing: 0.2em; color: var(--ember-400); }
+.tl-title { font-family: var(--ff-display); font-size: 32px; line-height: 1.1; letter-spacing: -0.02em; }
+.tl-body { color: var(--bone-300); font-size: 15px; line-height: 1.6; }
+
+/* Team */
+.team-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+.coach { background: var(--ink-800); border: 1px solid rgba(255,255,255,0.06); border-radius: 16px; overflow: hidden; transition: border-color .2s, transform .2s; }
+.coach:hover { border-color: rgba(232,80,28,0.35); transform: translateY(-3px); }
+.coach__img {
+  aspect-ratio: 4/5; overflow: hidden;
+  background: linear-gradient(180deg, var(--ink-600), var(--ink-800));
+  display: grid; place-items: center;
+}
+.coach__img img { width: 100%; height: 100%; object-fit: cover; object-position: center top; display: block; filter: contrast(1.05) saturate(0.9); transition: transform .4s ease; }
+.coach:hover .coach__img img { transform: scale(1.04); }
+.coach__body { padding: 20px; }
+.coach__name { font-family: var(--ff-display); font-size: 20px; letter-spacing: -0.01em; }
+.coach__role { font-family: var(--ff-mono); font-size: 11px; letter-spacing: 0.18em; color: var(--ember-400); text-transform: uppercase; margin-top: 6px; }
+
+/* Map */
+.map-wrap { position: relative; border-radius: 20px; overflow: hidden; border: 1px solid rgba(255,255,255,0.08); height: 420px; background: #0A0604; }
+.map-pin { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -100%); display: flex; flex-direction: column; align-items: center; gap: 8px; pointer-events: none; }
+.map-pin__dot { width: 22px; height: 22px; border-radius: 50%; background: var(--ember-500); border: 3px solid var(--bone-50); box-shadow: 0 0 0 8px rgba(232,80,28,0.25), 0 8px 24px rgba(0,0,0,0.5); animation: pulse 2s infinite; }
+.map-pin__label { background: var(--ink-900); border: 1px solid var(--ember-500); padding: 6px 12px; border-radius: var(--radius-pill); font-family: var(--ff-mono); font-size: 11px; letter-spacing: 0.15em; color: var(--bone-50); }
+
+/* Contact */
+.contact-action { display: inline-flex; align-items: center; gap: 10px; margin-top: 12px; padding: 10px 16px; border-radius: var(--radius-pill); background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); font-size: 13px; color: var(--bone-50); transition: all .2s ease; cursor: pointer; }
+.contact-action:hover { background: rgba(255,255,255,0.08); border-color: var(--ember-400); }
+.contact-action__icon { width: 24px; height: 24px; border-radius: 50%; display: grid; place-items: center; font-family: var(--ff-display); font-weight: 700; font-size: 12px; color: white; }
+.contact-grid { display: grid; grid-template-columns: 1.1fr 1fr; gap: 56px; align-items: start; }
+.contact-form { display: flex; flex-direction: column; gap: 18px; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+.form-field { display: flex; flex-direction: column; gap: 8px; }
+.form-field label { font-family: var(--ff-mono); font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--bone-300); }
+.form-field input, .form-field textarea, .form-field select { width: 100%; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 14px 16px; color: var(--bone-50); font-family: var(--ff-text); font-size: 15px; outline: none; transition: border-color .2s; }
+.form-field select { appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23C9B898' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 16px center; padding-right: 40px; cursor: pointer; }
+.form-field select option { background: #1A120C; }
+.form-field input:focus, .form-field textarea:focus, .form-field select:focus { border-color: var(--ember-400); }
+.form-field textarea { resize: vertical; min-height: 140px; }
+.contact-side { background: linear-gradient(180deg, #1A120C 0%, #0E0905 100%); border-radius: 20px; padding: 36px; border: 1px solid rgba(255,255,255,0.06); }
+.contact-info-row { display: flex; flex-direction: column; gap: 4px; padding: 18px 0; border-bottom: 1px solid rgba(255,255,255,0.06); }
+.contact-info-row:last-of-type { border-bottom: none; }
+.contact-info-row .lbl { font-family: var(--ff-mono); font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--bone-300); }
+.contact-info-row .val { font-family: var(--ff-display); font-size: 20px; }
+.hours-grid { display: grid; grid-template-columns: 1fr auto; gap: 8px 24px; font-family: var(--ff-mono); font-size: 13px; margin-top: 14px; }
+.hours-grid .day { color: var(--bone-300); }
+.hours-grid .time { color: var(--bone-50); }
+
+/* Footer */
+.footer { padding: 80px 0 40px; border-top: 1px solid rgba(255,255,255,0.06); margin-top: 80px; }
+.footer__top { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px; margin-bottom: 60px; }
+.footer__brand { font-family: var(--ff-display); font-size: 56px; line-height: 0.9; letter-spacing: -0.03em; }
+.footer__brand em { font-style: italic; font-weight: 500; color: var(--ember-400); }
+.footer__col h4 { font-family: var(--ff-mono); font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--ember-400); margin: 0 0 16px; }
+.footer__col ul { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 10px; }
+.footer__col a { color: var(--bone-200); font-size: 14px; cursor: pointer; }
+.footer__col a:hover { color: var(--ember-400); }
+.footer__bottom { display: flex; justify-content: space-between; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.06); font-family: var(--ff-mono); font-size: 11px; color: var(--bone-300); letter-spacing: 0.15em; text-transform: uppercase; }
+
+/* Page transitions */
+.page { display: none; animation: pageIn .5s cubic-bezier(.2,0,.2,1); }
+.page.is-active { display: block; }
+@keyframes pageIn { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .hero { grid-template-columns: 1fr; padding: 40px 32px 60px; }
+  .hero__athlete { width: 80%; right: -10%; opacity: 0.5; }
+  .chips { position: static; margin-top: 24px; }
+  .bmi { grid-template-columns: 1fr; padding: 36px; }
+  .programs-grid { grid-template-columns: repeat(6, 1fr); }
+  .program-card--lg, .program-card--feat, .program-card--md { grid-column: span 6; }
+  .team-grid { grid-template-columns: repeat(2, 1fr); }
+  .stats { grid-template-columns: repeat(2, 1fr); }
+  .stat:nth-child(2) { border-right: none; }
+  .stat:nth-child(1), .stat:nth-child(2) { border-bottom: 1px solid rgba(255,255,255,0.06); }
+  .contact-grid { grid-template-columns: 1fr; }
+  .footer__top { grid-template-columns: 1fr 1fr; }
+  .tl-row { grid-template-columns: 1fr; }
+  .coach-feature { grid-template-columns: 1fr; }
+  .testimonials { grid-template-columns: repeat(2, 1fr); }
+  .gallery { grid-template-columns: repeat(2, 1fr); }
+  .g-card.g-wide { grid-column: span 2; }
+  .g-card.g-tall { grid-row: span 1; }
+}
+@media (max-width: 640px) {
+  .nav__links { display: none; }
+  .stage { margin: 8px 8px 0; border-radius: 18px; }
+  .hero { padding: 24px 24px 40px; }
+  .form-row { grid-template-columns: 1fr; }
+  .bmi__inputs { grid-template-columns: 1fr; }
+  .programs-grid { grid-template-columns: 1fr; }
+  .program-card--lg, .program-card--feat, .program-card--md { grid-column: span 1; }
+  .team-grid { grid-template-columns: 1fr 1fr; }
+  .stats { grid-template-columns: 1fr; }
+  .stat { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.06); }
+  .footer__top { grid-template-columns: 1fr; }
+  .testimonials { grid-template-columns: 1fr; }
+  .gallery { grid-template-columns: 1fr; grid-auto-rows: 200px; }
+  .g-card.g-wide { grid-column: span 1; }
+}
+(() => {
+  const routes = ['home', 'programs', 'gallery', 'about', 'contact'];
+  const heroMap = {
+    home: 'page-home', programs: 'page-programs-hero',
+    gallery: 'page-gallery-hero', about: 'page-about-hero', contact: 'page-contact-hero'
+  };
+
+  let lang = localStorage.getItem('lang') || 'en';
+  const t = (k) => (window.I18N[lang]?.[k]) || (window.I18N.en[k] || k);
+
+  function applyI18n() {
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+      const key = el.getAttribute('data-i18n');
+      const val = t(key);
+      if (el.getAttribute('data-i18n-html')) el.innerHTML = val;
+      else el.textContent = val;
+    });
+    document.documentElement.lang = lang;
+    const flag = document.getElementById('lang-flag');
+    const lbl  = document.getElementById('lang-label');
+    if (flag) flag.textContent = lang === 'en' ? '🇷🇸' : '🇬🇧';
+    if (lbl)  lbl.textContent  = lang === 'en' ? 'SR' : 'EN';
+    renderTestimonials(); renderGallery(); renderTimeline(); renderTeam(); renderTicker(); computeBMI();
+  }
+
+  document.getElementById('lang-toggle').addEventListener('click', () => {
+    lang = lang === 'en' ? 'sr' : 'en';
+    localStorage.setItem('lang', lang);
+    applyI18n();
+  });
+
+  function go(route) {
+    if (!routes.includes(route)) route = 'home';
+    Object.values(heroMap).forEach(id => {
+      document.getElementById(id)?.classList.toggle('is-active', id === heroMap[route]);
+    });
+    document.querySelectorAll('main > .page').forEach(p => p.classList.remove('is-active'));
+    document.getElementById('body-' + route)?.classList.add('is-active');
+    document.querySelectorAll('.nav__link').forEach(b => b.classList.toggle('is-active', b.dataset.route === route));
+    if (location.hash !== '#' + route) history.replaceState(null, '', '#' + route);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  document.addEventListener('click', e => {
+    const tgt = e.target.closest('[data-route]');
+    if (tgt) { e.preventDefault(); go(tgt.dataset.route); }
+  });
+
+  // Parallax
+  const athlete = document.getElementById('athlete');
+  let raf = null;
+  function updateParallax() {
+    if (!athlete || !document.getElementById('page-home').classList.contains('is-active')) return;
+    const y = window.scrollY;
+    athlete.style.transform = `translateY(${-Math.min(y * 0.45, 280)}px) scale(${1 + Math.min(y * 0.0004, 0.08)}) rotate(${-Math.min(y * 0.005, 2) * 0.3}deg)`;
+  }
+  window.addEventListener('scroll', () => { if (!raf) raf = requestAnimationFrame(() => { updateParallax(); raf = null; }); }, { passive: true });
+  if (athlete) {
+    athlete.style.opacity = '0';
+    athlete.style.transform = 'translateY(40px) scale(0.96)';
+    requestAnimationFrame(() => {
+      athlete.style.transition = 'opacity 1.4s cubic-bezier(.2,0,.2,1), transform 1.6s cubic-bezier(.2,0,.2,1)';
+      athlete.style.opacity = '1';
+      athlete.style.transform = 'translateY(0) scale(1)';
+      setTimeout(() => { athlete.style.transition = ''; }, 1700);
+    });
+  }
+
+  // Ticker
+  function renderTicker() {
+    const track = document.getElementById('ticker-track');
+    if (!track) return;
+    const words = lang === 'sr'
+      ? ['SNAGA','IZDRŽLJIVOST','BORBA','POKRETLJIVOST','OPORAVAK','PRECIZNOST','DISCIPLINA','NAPREDAK','HRABROST','ZANAT']
+      : ['STRENGTH','ENDURANCE','COMBAT','MOBILITY','RECOVERY','PRECISION','DISCIPLINE','PROGRESS','GRIT','CRAFT'];
+    const items = words.map(w => `<span class="ticker__item">${w}<span class="dot"></span></span>`).join('');
+    track.innerHTML = items + items;
+  }
+
+  // Testimonials — with real portrait photos from Unsplash
+  const testimonialsPhotos = [
+    'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=96&q=80',  // man
+    'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=96&q=80',  // woman
+    'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=96&q=80',  // man
+    'https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=96&q=80',  // woman
+    'https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?auto=format&fit=crop&w=96&q=80',  // man
+    'https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?auto=format&fit=crop&w=96&q=80',  // woman
+  ];
+
+  function renderTestimonials() {
+    const root = document.getElementById('testimonials');
+    if (!root) return;
+    let html = '';
+    for (let i = 1; i <= 6; i++) {
+      const name = t(`t.${i}.name`);
+      const init = name.split(' ').map(w => w[0]).slice(0,2).join('');
+      const photoUrl = testimonialsPhotos[i - 1];
+      html += `
+        <article class="testimonial">
+          <div class="testimonial__stars">★★★★★</div>
+          <p class="testimonial__body">"${t(`t.${i}.body`)}"</p>
+          <div class="testimonial__person">
+            <div class="testimonial__avatar">
+              <img src="${photoUrl}" alt="${name}" loading="lazy"
+                onerror="this.parentElement.style.background='linear-gradient(135deg,#C9762B,#1A0E07)';this.parentElement.innerHTML='${init}';" />
+            </div>
+            <div>
+              <div class="testimonial__name">${name}</div>
+              <div class="testimonial__role">${t(`t.${i}.role`)}</div>
+            </div>
+          </div>
+        </article>`;
+    }
+    root.innerHTML = html;
+  }
+
+  // Gallery — 8 cards with real gym photos (Jeff Nippard Muscle Lab aesthetic)
+  const galleryImages = [
+    {
+      src: 'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=800&q=80',
+      cls: 'g-tall', label: () => t('g.1'),
+      desc: () => lang === 'sr' ? 'Gvožđe, beton i znojava volja' : 'Iron, concrete and sheer will'
+    },
+    {
+      src: 'https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=800&q=80',
+      cls: 'g-wide', label: () => t('g.2'),
+      desc: () => lang === 'sr' ? 'Pre nego što svet procita' : 'Before the world wakes up'
+    },
+    {
+      src: 'https://images.unsplash.com/photo-1549476464-37392f717541?auto=format&fit=crop&w=800&q=80',
+      cls: 'g-sq', label: () => t('g.3'),
+      desc: () => lang === 'sr' ? 'Gvožđe brusi gvožđe' : 'Iron sharpens iron'
+    },
+    {
+      src: 'https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?auto=format&fit=crop&w=800&q=80',
+      cls: 'g-sq', label: () => t('g.4'),
+      desc: () => lang === 'sr' ? 'Nema prečice' : 'No shortcuts here'
+    },
+    {
+      src: 'https://images.unsplash.com/photo-1552674605-db5fecabfe68?auto=format&fit=crop&w=800&q=80',
+      cls: 'g-tall', label: () => t('g.5'),
+      desc: () => lang === 'sr' ? 'Opseg koji si izgubio, vraćamo ga' : 'Range you lost — reclaimed'
+    },
+    {
+      src: 'https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=800&q=80',
+      cls: 'g-wide', label: () => t('g.6'),
+      desc: () => lang === 'sr' ? 'Oporavak je disciplina' : 'Recovery is a discipline'
+    },
+    {
+      src: 'https://images.unsplash.com/photo-1576678927484-cc907957088c?auto=format&fit=crop&w=800&q=80',
+      cls: 'g-sq', label: () => t('g.7'),
+      desc: () => lang === 'sr' ? 'Svaki kilogram ima svoju priču' : 'Every kilo tells a story'
+    },
+    {
+      src: 'https://images.unsplash.com/photo-1526506118085-60122a070ca0?auto=format&fit=crop&w=800&q=80',
+      cls: 'g-sq', label: () => t('g.8'),
+      desc: () => lang === 'sr' ? 'Zona 2. Svake nedelje.' : 'Zone 2. Every week.'
+    },
+  ];
+
+  function renderGallery() {
+    const root = document.getElementById('gallery');
+    if (!root) return;
+    root.innerHTML = galleryImages.map((c, i) => `
+      <figure class="g-card ${c.cls}">
+        <div class="g-card__bg">
+          <img
+            class="g-card__photo"
+            src="${c.src}"
+            alt="${c.label()}"
+            loading="lazy"
+            onerror="this.style.display='none'"
+          />
+          <div class="g-card__tint"></div>
+          <div class="g-card__noise"></div>
+        </div>
+        <figcaption class="g-card__cap">
+          <div class="g-card__num">${String(i+1).padStart(2,'0')} / 08</div>
+          <div class="g-card__title">${c.label()}</div>
+          <div class="g-card__desc">${c.desc()}</div>
+        </figcaption>
+      </figure>
+    `).join('');
+  }
+
+  // Timeline
+  function renderTimeline() {
+    const root = document.getElementById('timeline');
+    if (!root) return;
+    root.innerHTML = [
+      { y: '2014', i: 1 }, { y: '2017', i: 2 }, { y: '2019', i: 3 },
+      { y: '2022', i: 4 }, { y: '2026', i: 5 },
+    ].map(r => `
+      <div class="tl-row">
+        <div class="tl-year">${r.y}</div>
+        <div class="tl-title">${t(`tl.${r.i}.t`)}</div>
+        <div class="tl-body">${t(`tl.${r.i}.b`)}</div>
+      </div>
+    `).join('');
+  }
+
+  // Team — real fitness photos from Unsplash
+  const coachPhotos = [
+    { src: 'assets/coach-dann.png', pos: '30% 10%' },
+    { src: 'https://images.unsplash.com/photo-1571019613454-e9f7e13c72ef?auto=format&fit=crop&w=400&q=80', pos: 'center top' },
+    { src: 'https://images.unsplash.com/photo-1517960413843-0aee8e2b3285?auto=format&fit=crop&w=400&q=80', pos: 'center top' },
+    { src: 'https://images.unsplash.com/photo-1559839734-2b71ea197247?auto=format&fit=crop&w=400&q=80', pos: 'center top' },
+    { src: 'https://images.unsplash.com/photo-1550345332-09519ad4516d?auto=format&fit=crop&w=400&q=80', pos: 'center top' },
+    { src: 'https://images.unsplash.com/photo-1518310959098-23b5f2c4d81c?auto=format&fit=crop&w=400&q=80', pos: 'center top' },
+  ];
+
+  function renderTeam() {
+    const root = document.getElementById('team-grid');
+    if (!root) return;
+    root.innerHTML = [1,2,3,4,5,6].map(i => {
+      const p = coachPhotos[i - 1];
+      return `
+        <div class="coach">
+          <div class="coach__img">
+            <img
+              src="${p.src}"
+              alt="${t(`c.${i}.name`)}"
+              style="object-position:${p.pos};"
+              loading="lazy"
+              onerror="this.style.display='none'"
+            />
+          </div>
+          <div class="coach__body">
+            <div class="coach__name">${t(`c.${i}.name`)}</div>
+            <div class="coach__role">${t(`c.${i}.role`)}</div>
+          </div>
+        </div>`;
+    }).join('');
+  }
+
+  // BMI
+  const bmi = { unit: 'metric', height: 178, weight: 76 };
+  const $hInput = document.getElementById('bmi-height');
+  const $wInput = document.getElementById('bmi-weight');
+  const $hUnit  = document.getElementById('unit-height');
+  const $wUnit  = document.getElementById('unit-weight');
+  const $value  = document.getElementById('bmi-value');
+  const $cat    = document.getElementById('bmi-category');
+  const $point  = document.getElementById('bmi-pointer');
+  const $advice = document.getElementById('bmi-advice');
+  const $tabs   = document.querySelectorAll('.bmi__tab');
+
+  function categorize(v) {
+    if (v < 18.5) return { key: 'under',  color: '#4A90E2' };
+    if (v < 25)   return { key: 'normal', color: '#6BC07A' };
+    if (v < 30)   return { key: 'over',   color: '#E8A647' };
+    return              { key: 'obese',  color: '#E8501C' };
+  }
+
+  function computeBMI() {
+    if (!$value) return;
+    const hM  = bmi.unit === 'metric' ? bmi.height / 100 : bmi.height * 0.0254;
+    const wKg = bmi.unit === 'metric' ? bmi.weight       : bmi.weight * 0.453592;
+    if (hM <= 0 || !isFinite(hM) || !isFinite(wKg)) return;
+    const v = wKg / (hM * hM);
+    if (!isFinite(v) || v <= 0) return;
+    $value.textContent = v.toFixed(1);
+    const c = categorize(v);
+    $cat.textContent = t('bmi.cat.' + c.key);
+    $cat.style.cssText = `background:${c.color}26;color:${c.color};border:1px solid ${c.color}55;`;
+    $point.style.left = (((Math.max(15, Math.min(40, v)) - 15) / 25) * 100) + '%';
+    $advice.innerHTML = t('bmi.tip.' + c.key);
+  }
+
+  function setUnit(unit) {
+    if (unit === bmi.unit) return;
+    bmi.unit = unit;
+    if (unit === 'metric') {
+      $hUnit.textContent = 'cm'; $wUnit.textContent = 'kg';
+      bmi.height = 178; bmi.weight = 76;
+      $hInput.value = 178; $wInput.value = 76;
+    } else {
+      $hUnit.textContent = 'in'; $wUnit.textContent = 'lb';
+      bmi.height = 70; bmi.weight = 168;
+      $hInput.value = 70; $wInput.value = 168;
+    }
+    $tabs.forEach(tab => tab.classList.toggle('is-active', tab.dataset.unit === unit));
+    computeBMI();
+  }
+
+  $tabs.forEach(tab => tab.addEventListener('click', () => setUnit(tab.dataset.unit)));
+  $hInput?.addEventListener('input', e => { bmi.height = parseFloat(e.target.value) || 0; computeBMI(); });
+  $wInput?.addEventListener('input', e => { bmi.weight = parseFloat(e.target.value) || 0; computeBMI(); });
+
+  // Contact form
+  const cf = document.getElementById('contact-form');
+  cf?.addEventListener('submit', e => {
+    e.preventDefault();
+    const status = document.getElementById('cf-status');
+    const first  = document.getElementById('cf-first').value.trim();
+    const email  = document.getElementById('cf-email').value.trim();
+    if (!first || !email) { status.style.color = '#E8501C'; status.textContent = t('cf.err'); return; }
+    status.style.color = '#6BC07A';
+    status.textContent = t('cf.ok').replace('{name}', first);
+    cf.reset();
+  });
+
+  window.renderTestimonials = renderTestimonials;
+  window.renderGallery = renderGallery;
+  window.renderTimeline = renderTimeline;
+  window.renderTeam = renderTeam;
+  window.computeBMI = computeBMI;
+
+  applyI18n();
+  renderTicker();
+  renderTestimonials();
+  renderGallery();
+  renderTimeline();
+  renderTeam();
+  computeBMI();
+  updateParallax();
+  go((location.hash || '#home').replace('#', ''));
+})();
